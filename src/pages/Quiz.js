@@ -1,40 +1,35 @@
-import React from 'react'
 import { useState } from 'react'
 import questions from '../data/questions'
+import { useNavigate } from 'react-router-dom'
+
 
 export default function Quiz() {
-
-  // const [question , setQuestion] = useState([])
-  // const [options , setOptions] = useState([0])
   
   const [ score , setScore ] = useState(0)
   const [index , setIndex] =useState(0)
+const navigate = useNavigate();
 
   const handleScore = (option)=>{
+    let result = score
     if(option === questions[index].answer){
-      setScore(score + 1)
+      result=score+1
+      setScore(result)
     }
-    setIndex(index + 1)
-    
+    if(index < questions.length - 1 ){
+      setIndex(index + 1)
+    }else{
+      navigate('/Result',{state:{result}})
+    }
   } 
-  console.log(score)
-
-
-//  const passer=()=>{
-//   setIndex(index+1)
-//  }
 
   return (
     <div>
       <h1>{questions[index].question}</h1>
-      {/* <button onClick={()=>handleScore(questions[index].options[0])}>{questions[index].options[0]}</button><br/><br/>
-      <button onClick={()=>handleScore(questions[index].options[1])}>{questions[index].options[1]}</button><br/><br/>
-      <button onClick={()=>handleScore(questions[index].options[2])}>{questions[index].options[2]}</button><br/><br/>
-      <button onClick={()=>handleScore(questions[index].options[3])}>{questions[index].options[3]}</button><br/><br/> */}
+      <h1>{questions[index].answer}</h1>
 
-      
+
       {questions[index].options.map((option) => (
-        <div>
+        <div key={option}>
           <button onClick={() => handleScore(option)}>{option}</button>
           <br />
           <br />
