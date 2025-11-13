@@ -3,12 +3,13 @@ import logoNav from './logoNav.png'
 
 export default function Footer() {
   return (
-    <footer>
-        <div className='footer'>
+    <footer className='footer'>
+        <div className='logo-footer'>
             <img src={logoNav}/>
         </div>
-        <p className='footer-p'>TechEdu Learning Center © 2025</p>
-
+        <div>
+            <p className='footer-p'>TechEdu Learning Center © 2025</p>
+        </div>
     </footer>
   )
 }
