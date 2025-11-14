@@ -23,18 +23,15 @@ const navigate = useNavigate();
   } 
 
   return (
-    <div>
+    <div className='quiz'>
+    <div className="quiz-box">
       <h1>{questions[index].question}</h1>
-      <h1>{questions[index].answer}</h1>
-
-
-      {questions[index].options.map((option) => (
-        <div key={option}>
+        {questions[index].options.map((option) => (
+        <div key={option} className='option'>
           <button onClick={() => handleScore(option)}>{option}</button>
-          <br />
-          <br />
         </div>
        ))}
+    </div>
     </div>
   )
 }

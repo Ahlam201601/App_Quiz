@@ -9,10 +9,11 @@ body {
   box-shadow: 0px 5px 10px 0px #aaa;
   background: #B64FD7;
   height: 85px;
+  width: 100%;
   display: flex;
   justify-content:space-between;
   align-items: center;
-  padding: 5px 200px 0 40px;
+  position: fixed;
 }
 
 .logo img {
@@ -26,6 +27,7 @@ body {
   display: flex;
   align-items: center;
   gap: 80px;
+  margin-right: 80px;
 }
 
 .links a {
@@ -42,7 +44,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 793px; 
+  height: 100vh; 
   background-image: url(/public/image_Quiz.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -79,18 +81,17 @@ body {
   background-color: #B64FD7;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content:center;
   align-items: center;
+  text-align: center;
   gap: 15px;
-  padding: 10px 750px 10px 50px;
+  bottom: 0;
+  position: fixed;
   height: 60px;
+  width: 100%;
+
 }
-.footer .logo-footer img{
-  
-  width: 140px;
-  margin-top: 15px;
-  cursor: pointer;
-}
+
 
 .footer-p{
   font-size: 25px;
@@ -98,4 +99,71 @@ body {
   margin: 0;
 }
 
+/* Quiz*/
+.quiz {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.quiz-box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 600px;
+  padding: 50px 70px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  text-align: center; 
+  
+}
+
+.quiz-box h1 {
+  font-size: 22px;
+  color: #333;
+}
+.option{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.quiz-box button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #B64FD7; 
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.quiz-box button:hover {
+  background-color: #7b1dd1;
+  /* transform: translateY(-3px); */
+}
+
+
+/* .quiz-box button:active {
+  transform: scale(0.97);
+} */
+
+.result{
+  /* height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 40px;
+  text-align: center; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
