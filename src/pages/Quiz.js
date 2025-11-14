@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 import questions from '../data/questions'
 import { useNavigate } from 'react-router-dom'
@@ -7,7 +8,7 @@ export default function Quiz() {
   
   const [ score , setScore ] = useState(0)
   const [index , setIndex] =useState(0)
-const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleScore = (option)=>{
     let result = score

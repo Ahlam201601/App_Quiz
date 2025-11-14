@@ -55,9 +55,9 @@ const questions = [
       answer: "[]"
     },
     {
-      question: "Which of the following is NOT a semantic HTML element?",
-      options: ["<section>", "<div>", "<header>", "<footer>"],
-      answer: "<div>"
+      question: "Which tag is used to create a hyperlink in HTML?",
+      options: ["<link>", "<a>", "<href>", "<url>"],
+      answer: "<a>"
     },
     {
       question: "What is the default value of position in CSS?",
