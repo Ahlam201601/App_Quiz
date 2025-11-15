@@ -9,13 +9,13 @@ export default function Result() {
 
   let message = "";
       if (result === 10) {
-        message = "🌟 Excellent ! Tu as tout réussi !";
+        message = "🌟 Excellent";
       } else if (result >= 7) {
-        message = "👍 Bien ! Tu maîtrises bien le quiz.";
+        message = "👍 GOOD";
       } else if (result >= 5) {
-        message = "🙂 Assez bien ! Tu peux encore améliorer.";
+        message = "🙂 Pretty Good";
       } else {
-        message = "😕 Peut mieux faire ! Continue d'apprendre.";
+        message = "😕 Could do better ";
       }
 
   return (
